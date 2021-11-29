@@ -9,13 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.example.workhomee1.databinding.FragmentBoardBinding;
-import com.example.workhomee1.utils.Constants;
+import com.example.hi.databinding.FragmentBoardBinding;
+import com.example.hi.utils.Constants;
 
 
 public class BoardFragment extends Fragment {
 
-FragmentBoardBinding  binding;
+FragmentBoardBinding binding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ binding= FragmentBoardBinding.inflate(getLayoutInflater());
                 break;
                 case 2:
                     binding.description.setText("3");
+
                     break;
             }
         }

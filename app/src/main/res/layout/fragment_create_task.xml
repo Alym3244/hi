@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_background"
-        android:hint="Task"
+        android:hint="задача"
         android:padding="12dp"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:drawableEnd="@drawable/ic_date"
         android:drawablePadding="8dp"
         android:padding="10dp"
-        android:text="19.08.2021"
+        android:text="дата"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@id/task_ed"
         app:layout_constraintTop_toBottomOf="@id/task_ed" />
@@ -40,7 +40,7 @@
         android:drawableEnd="@drawable/ic_arrow_down"
         android:drawablePadding="8dp"
         android:padding="10dp"
-        android:text="Never"
+        android:text="повторение"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/task_ed" />
@@ -52,7 +52,7 @@
         android:layout_marginTop="18dp"
         android:textColor="@android:color/white"
         android:background="@drawable/rectangle_background_button"
-        android:text="Add new Task"
+        android:text="установить новую задачу?"
         app:layout_constraintTop_toBottomOf="@id/date_tv" />
 
     <TextView
@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/add_btn"
-        android:text="Back to task list"/>
+        android:text="вернуться к листу задач"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

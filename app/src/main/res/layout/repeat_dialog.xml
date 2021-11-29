@@ -14,7 +14,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintTop_toBottomOf="@+id/red_rectangle"
-    android:text="Repeat Task"
+    android:text="повторить задачу"
     android:textStyle="bold"
     android:textSize="20sp"
     android:textColor="@color/black"/>
@@ -26,34 +26,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_tv" >
         <RadioButton
-            android:text="Never"
+            android:id="@+id/never"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
+            android:layout_margin="6dp"
+            android:text="никогда" />
+
+
         <RadioButton
-            android:text="Every day"
+            android:id="@+id/every_day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
+            android:layout_margin="6dp"
+            android:text="каждый день" />
+
         <RadioButton
-            android:text="every week"
+            android:id="@+id/every_week"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
+            android:layout_margin="6dp"
+            android:text="каждую неделю" />
+
         <RadioButton
-            android:text="every month"
+            android:id="@+id/every_month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
+            android:layout_margin="6dp"
+            android:text="каждый месяц" />
+
         <RadioButton
-            android:text="every ear"
+            android:id="@+id/every_year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
-        <RadioButton
-            android:text="custom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"/>
+            android:layout_margin="6dp"
+            android:text="каждый год" />
     </RadioGroup>
 </androidx.constraintlayout.widget.ConstraintLayout>
