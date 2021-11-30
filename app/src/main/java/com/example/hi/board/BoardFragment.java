@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.hi.R;
 import com.example.hi.databinding.FragmentBoardBinding;
 import com.example.hi.utils.Constants;
 
@@ -36,6 +37,7 @@ binding= FragmentBoardBinding.inflate(getLayoutInflater());
             switch (position){
 
                 case 0:
+                    binding.boardImage.setImageResource(R.drawable.ic_launcher_background);
                     binding.description.setText("1");
                     break;
                 case 1:

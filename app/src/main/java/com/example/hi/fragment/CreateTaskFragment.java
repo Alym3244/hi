@@ -16,6 +16,8 @@ import androidx.annotation.Nullable;
 
 import com.example.hi.R;
 import com.example.hi.databinding.FragmentCreateTaskBinding;
+import com.example.hi.model.TaskModel;
+import com.example.hi.utils.App;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.Calendar;
@@ -25,6 +27,7 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
     private int startYear;
     private int starthMonth;
     private int startDay;
+    String deadline;
     String repeatCount;
     FragmentCreateTaskBinding binding;
     String userTask;
@@ -92,8 +95,8 @@ public class CreateTaskFragment extends BottomSheetDialogFragment implements Dat
         neverBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                repeatCount = neverBtn.getText().toString();
                 binding.repeatTv.setText(neverBtn.getText().toString());
+                repeatCount = neverBtn.getText().toString();
                 alertDialog.dismiss();
 
             }
@@ -147,12 +150,16 @@ datePickerDialog.show();
     }
 
     private void passModelToHomeFragment() {
-        userTask = binding.taskEd.getText().toString();
-
+        userTask=binding.taskEd.getText().toString();
+        TaskModel taskModel = new TaskModel(userTask,deadline,repeatCount);
+        App.getInstance().getDatabase().taskDao().insert(taskModel);
+        dismiss();
     }
 
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
 binding.dateTv.setText(year+","+month+","+dayOfMonth);
+deadline=year+"."+month+"."+dayOfMonth;
+binding.dateTv.setText(deadline);
     }
 }
